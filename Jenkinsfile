@@ -3,7 +3,7 @@ pipeline {
     registry = 'marcotomas/helloworld-go'
     registryCredential = 'dockerhub'
   }
-  agent any
+  agent 'docker'
   stages {
     stage('Cloning Git') {
       steps {
