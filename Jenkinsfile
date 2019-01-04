@@ -3,7 +3,9 @@ pipeline {
     registry = 'marcotomas/helloworld-go'
     registryCredential = 'dockerhub'
   }
-  agent { image 'jenkinsci/slave' }
+  agent {
+        docker { image 'jenkinsci/slave' }
+  }
   stages {
     stage('Cloning Git') {
       steps {
